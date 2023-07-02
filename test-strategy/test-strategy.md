@@ -1,6 +1,6 @@
 # Test strategy for reqres.in API
 
-# Table of Contents
+## Table of Contents
   - [Introduction](#introduction)
   - [Types of tests to be executed](#types-of-tests-to-be-executed)
     - [Functional testing](#functional-testing)
