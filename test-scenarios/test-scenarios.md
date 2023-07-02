@@ -207,5 +207,13 @@ Given that the admin user is logged in
 And they send a DELETE request for a non-existing user
 Then the API returns status code 400
 And an error message
+
+
+
+Scenario: Unsuccessful deletion through a non-admin user
+Given that the user that is logged in is not an admin
+And they send a DELETE request for a user ID
+Then the API returns status code 403
+And an error message
 ```
 
