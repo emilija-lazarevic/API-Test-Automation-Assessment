@@ -47,7 +47,7 @@ And 'Missing password' error
 
 Scenario: Unsuccessful registration with a wrong HTTP method
 Given the user tries to send a registration request through a PUT/PATCH method
-Then API returns status code 404
+Then the API returns status code 404
 
 ```
 
@@ -58,32 +58,32 @@ Feature: User Login
 Scenario: Successful login
 Given the user enters a correct username
 And the correct password
-Then API returns status code 200 and a session token
+Then the API returns status code 200 and a session token
 
 
 Scenario: Unsuccessful login with a bad username
 Given the user enters a non-existing username
-Then API returns status code 400 
+Then the API returns status code 400 
 And 'User not found' error message
 
 
 Scenario: Unsuccessful login without a username
 Given the user leaves the username field empty
 And enters a password
-Then API returns status code 400
+Then the API returns status code 400
 And 'Missing email or username' error message 
 
 
 Scenario: Unsuccessful login without a password
 Given the user enters an existing username
 And leaves the password field empty
-Then API returns status code 400
+Then the API returns status code 400
 And 'Missing password' error message
 
 
 Scenario: Unsuccessful login with a wrong HTTP method
 Given the user tries to send a login request through a PUT/PATCH method
-Then API returns status code 404
+Then the API returns status code 404
 
 ```
 
@@ -93,7 +93,7 @@ Feature: User logout
 
 Scenario: Successful logout
 Given logged in user triggers the logout endpoint
-Then API returns status code 200
+Then the API returns status code 200
 
 ```
 
