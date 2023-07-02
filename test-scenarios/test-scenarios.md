@@ -2,7 +2,7 @@
 
 This document outlines test scenarios for user and admin roles.
 
-# Table of Contents
+## Table of Contents
   - [User role scenarios](#user-role-scenarios)
   - [Admin role scenarios](#admin-role-scenarios)
   - [Excluded scenarios](#excluded-scenarios)
