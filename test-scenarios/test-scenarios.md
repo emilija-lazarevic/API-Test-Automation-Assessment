@@ -2,8 +2,12 @@
 
 This document outlines test scenarios for user and admin roles.
 
-[TOC]
-
+# Table of Contents
+  - [User role scenarios](#user-role-scenarios)
+  - [Admin role scenarios](#admin-role-scenarios)
+  - [Excluded scenarios](#excluded-scenarios)
+    - [Excluded User role scenarios](#excluded-user-role-scenarios)
+    - [Excluded Admin role scenarios](#excluded-admin-role-scenarios)
 
 
 ## User role scenarios
@@ -133,7 +137,7 @@ Then the API returns status code 204
 
 These are scenarios that are excluded simply because of the limitation of the mocked API and they would have replaced some of the automated scenarios.
 
-## User role scenarios
+## Excluded User role scenarios
 
 ```gherkin
 Feature: User registration
@@ -172,7 +176,7 @@ And an error message
 
 
 
-## Admin role scenarios
+## Excluded Admin role scenarios
 
 ```gherkin
 Feature: Update user
