@@ -24,12 +24,13 @@
 											"});\r",
 											"\r",
 											"pm.test('A user ID has been assigned', function () {\r",
-											"pm.response.json().hasOwnProperty(\"id\")\r",
+											"    pm.response.json().hasOwnProperty(\"id\");\r",
 											"});\r",
 											"\r",
 											"pm.test('Response has returned a token', function () {\r",
-											"pm.response.json().hasOwnProperty(\"token\")\r",
-											"});"
+											"    pm.response.json().hasOwnProperty(\"token\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -40,7 +41,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"DreadWolf$123\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"DreadWolf$123\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -71,8 +72,9 @@
 											"});\r",
 											"\r",
 											"pm.test('An error has returned when trying to register an email in a bad format', function () {\r",
-											"pm.response.json().hasOwnProperty(\"error\")\r",
-											"});"
+											"    pm.response.json().hasOwnProperty(\"error\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -83,7 +85,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"badFormat.reques.in\",\r\n    \"password\": \"DreadWolf$123\"\r\n}",
+									"raw": "{\r\n    \"email\": \"badFormat.reques.in\",\r\n    \"password\": \"DreadWolf$123\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -114,8 +116,9 @@
 											"});\r",
 											"\r",
 											"pm.test(\"Response has returned a 'Missing email or username' error\", function () {\r",
-											"    pm.expect(pm.response.json().error).to.include(\"Missing email or username\"); \r",
-											"});"
+											"    pm.expect(pm.response.json().error).to.equal(\"Missing email or username\"); \r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -126,7 +129,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\" : \"DreadWolf$123\"\r\n}",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\" : \"DreadWolf$123\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -157,8 +160,9 @@
 											"});\r",
 											"\r",
 											"pm.test(\"Response has returned a 'Missing password' error\", function () {\r",
-											"    pm.expect(pm.response.json().error).to.include(\"Missing password\"); \r",
-											"});"
+											"    pm.expect(pm.response.json().error).to.equal(\"Missing password\"); \r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -169,7 +173,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\" : \"\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\" : \"\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -197,7 +201,8 @@
 										"exec": [
 											"pm.test(\"Unable to register through a wrong HTTP method\", function () {\r",
 											"    pm.response.to.have.status(404);\r",
-											"});"
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -208,7 +213,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"DreadWolf$123\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"DreadWolf$123\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -244,8 +249,9 @@
 											"});\r",
 											"\r",
 											"pm.test('Response has returned a token', function () {\r",
-											"pm.response.json().hasOwnProperty(\"token\")\r",
-											"});"
+											"    pm.response.json().hasOwnProperty(\"token\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -256,7 +262,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"Cerberus1!\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"Cerberus1!\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -287,8 +293,9 @@
 											"});\r",
 											"\r",
 											"pm.test(\"Response has returned a 'User not found' error\", function () {\r",
-											"    pm.expect(pm.response.json().error).to.include(\"user not found\"); \r",
-											"});"
+											"    pm.expect(pm.response.json().error).to.equal(\"user not found\"); \r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -299,7 +306,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"commander.shepard@gmail.com\",\r\n    \"password\" : \"cerberus123\"\r\n}",
+									"raw": "{\r\n    \"email\": \"commander.shepard@gmail.com\",\r\n    \"password\" : \"cerberus123\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -330,8 +337,9 @@
 											"});\r",
 											"\r",
 											"pm.test(\"Response has returned a 'Missing email or username' error\", function () {\r",
-											"    pm.expect(pm.response.json().error).to.include(\"Missing email or username\"); \r",
-											"});"
+											"    pm.expect(pm.response.json().error).to.equal(\"Missing email or username\"); \r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -342,7 +350,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\" : \"cerberus123\"\r\n}",
+									"raw": "{\r\n    \"email\": \"\",\r\n    \"password\" : \"cerberus123\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -373,8 +381,9 @@
 											"});\r",
 											"\r",
 											"pm.test(\"Response has returned a 'Missing password' error\", function () {\r",
-											"    pm.expect(pm.response.json().error).to.include(\"Missing password\");\r",
-											"});"
+											"    pm.expect(pm.response.json().error).to.equal(\"Missing password\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -385,7 +394,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\" : \"\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\" : \"\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -411,9 +420,10 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Unable to log in through a wrong http method\", function () {\r",
+											"pm.test(\"Unable to log in through a wrong HTTP method\", function () {\r",
 											"    pm.response.to.have.status(404);\r",
-											"});"
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -424,7 +434,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"Cerberus1!\"\r\n}",
+									"raw": "{\r\n    \"email\": \"{{valid-user-email}}\",\r\n    \"password\": \"Cerberus1!\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -490,7 +500,7 @@
 					"name": "Update User",
 					"item": [
 						{
-							"name": "Update User - Successful Update Through The PATCH Method",
+							"name": "Update User - Successful Update PATCH",
 							"event": [
 								{
 									"listen": "test",
@@ -510,7 +520,8 @@
 											"\r",
 											"pm.test(\"Response has returned an update timestamp with a proper update date\", function () {\r",
 											"    pm.expect(pm.response.json().updatedAt).to.include(pm.variables.get(\"currentDate\")); \r",
-											"});"
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -530,7 +541,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Liara\",\r\n    \"job\": \"Prothean Researcher\"\r\n}",
+									"raw": "{\r\n    \"name\": \"Liara\",\r\n    \"job\": \"Prothean Researcher\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -551,7 +562,7 @@
 							"response": []
 						},
 						{
-							"name": "Update User - Successful Update Through The PUT Method",
+							"name": "Update User - Successful Update PUT",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -580,7 +591,8 @@
 											"\r",
 											"pm.test(\"Response has returned an update timestamp with a proper update date\", function () {\r",
 											"    pm.expect(pm.response.json().updatedAt).to.include(pm.variables.get(\"currentDate\")); \r",
-											"});"
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -591,7 +603,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Alistair\",\r\n    \"job\": \"Templar\"\r\n}",
+									"raw": "{\r\n    \"name\": \"Alistair\",\r\n    \"job\": \"Templar\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -625,7 +637,8 @@
 										"exec": [
 											"pm.test(\"Status code is 204 upon successful user deletion\", function () {\r",
 											"    pm.response.to.have.status(204);\r",
-											"});"
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
