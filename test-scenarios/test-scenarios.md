@@ -18,7 +18,7 @@ Feature: User registration
 
 Scenario: Successful registration
 Given the user enters a proper email address
-And a password
+And a proper password
 Then the API returns status code 200
 And assigns a user ID to the account
 And returns a session token
@@ -32,7 +32,7 @@ And an error message
 
 
 Scenario: Unsuccessful registration without an email
-Given the user doesn't enter an email address
+Given the user leaves the email field empty
 And enters a password
 Then the API returns status code 400
 And 'Missing email or username' error message
