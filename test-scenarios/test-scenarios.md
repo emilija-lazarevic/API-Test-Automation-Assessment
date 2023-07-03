@@ -28,7 +28,7 @@ Scenario: Unsuccessful registration with a bad email format
 Given the user enters an email address that is in a wrong format
 And the user enters a password
 Then the API returns status code 400
-And the API returns an error message
+And the API returns a generic error message
 
 
 Scenario: Unsuccessful registration without an email
