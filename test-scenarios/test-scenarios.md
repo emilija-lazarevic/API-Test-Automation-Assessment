@@ -42,7 +42,7 @@ Scenario: Unsuccessful registration without an password
 Given the user enters a proper email address
 And the user leaves the password field empty
 Then the API returns status code 400
-And the API returns 'Missing password' error
+And the API returns 'Missing password' error message
 
 
 Scenario: Unsuccessful registration with a wrong HTTP method
