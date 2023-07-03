@@ -12,7 +12,7 @@ Create a new account or login to your account if you have one.
 
 Before running the tests, they will need to be imported to Postman.
 
-To do that first you need to download the [API Test Automation Assessment.postman_collection.json](https://github.com/emilija-lazarevic/API-Test-Automation-Assessment/blob/Postman_Collection/test-scripts/API%20Test%20Automation%20Assessment.postman_collection.json) file. 
+To do that first you need to download the [API Test Automation Assessment.postman_collection.json](https://github.com/emilija-lazarevic/API-Test-Automation-Assessment/blob/Postman_Collection/test-scripts/API%20Test%20Automation%20Assessment.postman_collection.json) and the [Sandbox.postman_environment.json](https://github.com/emilija-lazarevic/API-Test-Automation-Assessment/blob/minor_updates_for_md_files/test-scripts/Sandbox.postman_environment.json) file. 
 
 You can do that by opening the file and clicking on the download button:
 
@@ -37,6 +37,8 @@ Under the import button you will be able to see the test hirearchy:
 Tests are separated by the two roles (User and Admin) and each use case for that role has a separate folder with test scenarios related to them.
 
 # Selecting the environment
+
+Import the environment using the same steps that you used for importing tests, this time you need to import the Sandbox.postman_environment.json.
 
 Check if the right environment is selected. In the top right corner, under you account avatar, there will be the environment dropdown:
 
